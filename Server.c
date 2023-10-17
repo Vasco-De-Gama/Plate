@@ -55,9 +55,9 @@ int main() {
         while (1) {
             // Создание JSON объекта
             json_object *json_obj = json_object_new_object();
-            json_object_object_add(json_obj, "TEMP", json_object_new_string("50"/*тут будет ссылка на нужное*/));
-            json_object_object_add(json_obj, "CPU_FREQ", json_object_new_string("2000"));
-            json_object_object_add(json_obj, "GPIO", json_object_new_string("asdasd"));
+            json_object_object_add(json_obj, "TEMP", json_object_new_string("50"/*тут будет ссылка на нужное*/));           //sensors or psensor
+            json_object_object_add(json_obj, "CPU_FREQ", json_object_new_string("2000"));                                   //sys/devices/system/cpu   //cpuinfo_cur_freq -показывает текущую рабочую частоту процессора
+            json_object_object_add(json_obj, "GPIO", json_object_new_string("asdasd"));                                     //sys/class/gpio   //gpioset -устанавливает значения указанных линий GPIO
 
 
             // Преобразование JSON объекта в строку
