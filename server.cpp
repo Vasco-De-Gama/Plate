@@ -20,6 +20,7 @@ int main() {
     addr.sin_addr.s_addr = INADDR_ANY;
     addr.sin_port = htons(8888);
 
+    printf("I was born");
     //create socket
     if ((server = socket(AF_INET, SOCK_STREAM, 0)) ==0) {
         perror("Socket fail");
